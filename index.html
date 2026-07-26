@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Axion — AI Powered Rehabilitation Platform for Physical Therapy</title>
+<title>Axion — Gamified AI Rehabilitation Platform for Physical Therapy</title>
 <meta name="description" content="Axion helps patients complete prescribed home exercise programs correctly and consistently, and gives physical therapists visibility into recovery outside the clinic.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,10 @@
           navy800: '#122642',
           navy700: '#1A3355',
           navy600: '#2A4468',
-          blue: '#2E5FCC',
+          blue: '#6C5CE7',
+          lime: '#B8F35A',
+          cyan: '#5CE1E6',
+          coral: '#FF7A6B',
           blueSoft: '#5F84C4',
           slate: '#54607A',
           line: '#DFE4EC',
@@ -35,6 +38,11 @@
 <style>
   html { scroll-behavior: smooth; }
   body { font-family: 'Inter', sans-serif; background: #FFFFFF; color: #16233B; }
+  .game-grid { background-image: linear-gradient(rgba(108,92,231,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(108,92,231,.07) 1px, transparent 1px); background-size: 28px 28px; }
+  .glow { box-shadow: 0 20px 70px rgba(108,92,231,.18); }
+  .xp-badge { background: linear-gradient(135deg,#B8F35A,#5CE1E6); color:#0C1B30; }
+  .game-card { border:1px solid #E4E8EF; transition: transform .2s ease, box-shadow .2s ease; }
+  .game-card:hover { transform: translateY(-4px); box-shadow:0 18px 40px rgba(12,27,48,.10); }
   .font-serif { font-family: 'Source Serif 4', Georgia, serif; }
   .label { font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; font-weight: 600; }
 
@@ -60,8 +68,8 @@
 <!-- ================= UTILITY / COMPLIANCE BAR ================= -->
 <div class="bg-navy900 text-[#AEBEDA] text-[12.5px]">
   <div class="max-w-7xl mx-auto px-6 lg:px-10 h-9 flex items-center justify-between">
-    <span>For licensed physical therapy practices and health systems</span>
-    <span class="hidden sm:inline">HIPAA compliant infrastructure</span>
+    <span>Rehabilitation patients actually want to come back to</span>
+    <span class="hidden sm:inline">Clinical rigor. Game-level engagement.</span>
   </div>
 </div>
 
@@ -80,6 +88,7 @@
       <a href="#how-it-works" class="hover:text-blue">How It Works</a>
       <a href="#therapists" class="hover:text-blue">For Therapists</a>
       <a href="#patients" class="hover:text-blue">For Patients</a>
+      <a href="#gamification" class="hover:text-blue">Gamification</a>
       <a href="#technology" class="hover:text-blue">Technology</a>
       <a href="#research" class="hover:text-blue">Research</a>
       <a href="#about" class="hover:text-blue">About</a>
@@ -98,6 +107,7 @@
     <a href="#how-it-works">How It Works</a>
     <a href="#therapists">For Therapists</a>
     <a href="#patients">For Patients</a>
+    <a href="#gamification">Gamification</a>
     <a href="#technology">Technology</a>
     <a href="#research">Research</a>
     <a href="#about">About</a>
@@ -109,12 +119,12 @@
 <section id="top" class="bg-white pt-16 pb-20 lg:pt-24 lg:pb-24 border-b border-line">
   <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
     <div>
-      <p class="label text-blue">AI Powered Rehabilitation Platform</p>
+      <p class="label text-blue">Gamified AI Rehabilitation Platform</p>
       <h1 class="font-serif text-navy900 text-[2.4rem] leading-[1.15] sm:text-[2.9rem] lg:text-[3.1rem] font-semibold tracking-tight mt-5">
-        Helping patients recover, wherever their recovery happens.
+        Turn rehabilitation into progress patients can see, feel, and want to continue.
       </h1>
       <p class="mt-6 text-[17px] text-slate max-w-lg leading-relaxed">
-        Axion uses computer vision to help patients complete prescribed home exercise programs correctly and consistently, and gives physical therapists visibility into progress once the appointment ends.
+        Axion combines real-time movement coaching with adaptive challenges, streaks, milestones, and meaningful rewards—so prescribed rehabilitation feels less like homework and more like forward momentum. Therapists keep full clinical control while patients stay engaged between visits.
       </p>
       <div class="mt-9 flex flex-col sm:flex-row gap-3.5">
         <a href="#demo" class="bg-navy900 hover:bg-blue text-white font-semibold text-center px-6 py-3 rounded-md transition-colors">Request a Demo</a>
@@ -123,15 +133,15 @@
       <div class="mt-10 pt-8 border-t border-line grid grid-cols-3 gap-6 max-w-md">
         <div>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#2E5FCC" stroke-width="1.4"/><path d="M6.5 10l2.5 2.5 4.5 5" stroke="#2E5FCC" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <p class="text-[13.5px] text-navy900 mt-2 leading-snug font-medium">Real time movement tracking</p>
+          <p class="text-[13.5px] text-navy900 mt-2 leading-snug font-medium">Real-time form coaching</p>
         </div>
         <div>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#2E5FCC" stroke-width="1.4"/><path d="M6.5 10l2.5 2.5 4.5 5" stroke="#2E5FCC" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <p class="text-[13.5px] text-navy900 mt-2 leading-snug font-medium">Clinician dashboard access</p>
+          <p class="text-[13.5px] text-navy900 mt-2 leading-snug font-medium">Adaptive missions and streaks</p>
         </div>
         <div>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#2E5FCC" stroke-width="1.4"/><path d="M6.5 10l2.5 2.5 4.5 5" stroke="#2E5FCC" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <p class="text-[13.5px] text-navy900 mt-2 leading-snug font-medium">HIPAA compliant data handling</p>
+          <p class="text-[13.5px] text-navy900 mt-2 leading-snug font-medium">Progress therapists can act on</p>
         </div>
       </div>
     </div>
@@ -139,13 +149,13 @@
     <!-- Product panel, styled as a real clinician facing screen -->
     <div class="card rounded-lg shadow-sm overflow-hidden">
       <div class="bg-navy900 px-5 py-3 flex items-center justify-between">
-        <span class="text-white text-[13px] font-medium">Patient Session Overview</span>
-        <span class="text-[11px] text-[#9FB0CC]">Recovering from ACL Surgery, Week 4</span>
+        <span class="text-white text-[13px] font-medium">Recovery Quest</span>
+        <span class="text-[11px] text-[#9FB0CC]">ACL Recovery • Level 4</span>
       </div>
       <div class="p-6 bg-white">
         <div class="flex items-center justify-between">
-          <p class="label text-slate">Exercise 2 of 6, Straight Leg Raise</p>
-          <span class="text-[13px] font-semibold text-blue">Rep 9 of 12</span>
+          <p class="label text-slate">Mission 2 of 6 • Straight Leg Raise</p>
+          <span class="text-[13px] font-semibold text-blue">+90 XP</span>
         </div>
         <div class="mt-3 h-2 rounded-full bg-mist overflow-hidden">
           <div class="h-full bg-blue" style="width: 75%;"></div>
@@ -153,17 +163,17 @@
 
         <div class="mt-6 grid grid-cols-2 gap-4">
           <div class="card rounded-md p-4">
-            <p class="label text-slate">Form Accuracy</p>
+            <p class="label text-slate">Movement Score</p>
             <p class="font-serif text-2xl text-navy900 mt-1">94%</p>
           </div>
           <div class="card rounded-md p-4">
-            <p class="label text-slate">Range of Motion</p>
-            <p class="font-serif text-2xl text-navy900 mt-1">78 degrees</p>
+            <p class="label text-slate">Weekly Streak</p>
+            <p class="font-serif text-2xl text-navy900 mt-1">4 days</p>
           </div>
         </div>
 
         <div class="mt-6">
-          <p class="label text-slate mb-2">This Week's Sessions</p>
+          <p class="label text-slate mb-2">Quest Progress</p>
           <div class="flex items-center gap-1.5">
             <span class="w-6 h-6 rounded bg-blue"></span>
             <span class="w-6 h-6 rounded bg-blue"></span>
@@ -184,24 +194,53 @@
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="reveal max-w-xl">
       <p class="label text-blue">How It Works</p>
-      <h2 class="font-serif text-3xl sm:text-4xl font-semibold mt-3 tracking-tight text-navy900">A clinical workflow, extended into the home.</h2>
+      <h2 class="font-serif text-3xl sm:text-4xl font-semibold mt-3 tracking-tight text-navy900">A prescribed care plan, transformed into a motivating recovery journey.</h2>
     </div>
 
     <div class="grid md:grid-cols-3 gap-px bg-line mt-14 border border-line rounded-lg overflow-hidden">
       <div class="reveal bg-white p-8">
         <p class="label text-slate">Step 1</p>
-        <h3 class="font-serif text-xl font-semibold mt-3 text-navy900">The therapist builds the plan</h3>
-        <p class="text-slate mt-3 text-[15px] leading-relaxed">A licensed physical therapist assigns a personalized exercise program directly from their existing evaluation. It is the same plan they would otherwise hand to a patient on paper.</p>
+        <h3 class="font-serif text-xl font-semibold mt-3 text-navy900">The therapist defines the clinical path</h3>
+        <p class="text-slate mt-3 text-[15px] leading-relaxed">A licensed physical therapist selects the exercises, dosage, movement targets, and safety rules. Axion never replaces clinical judgment—it turns the prescribed plan into an interactive experience.</p>
       </div>
       <div class="reveal bg-white p-8">
         <p class="label text-slate">Step 2</p>
-        <h3 class="font-serif text-xl font-semibold mt-3 text-navy900">Axion guides the patient at home</h3>
-        <p class="text-slate mt-3 text-[15px] leading-relaxed">Using the camera on a phone or tablet, Axion tracks movement, counts repetitions, and flags form that falls outside the prescribed range.</p>
+        <h3 class="font-serif text-xl font-semibold mt-3 text-navy900">Axion turns each session into a mission</h3>
+        <p class="text-slate mt-3 text-[15px] leading-relaxed">Computer vision tracks reps, range, tempo, and form while patients earn XP, protect streaks, unlock milestones, and receive feedback calibrated to their recovery stage.</p>
       </div>
       <div class="reveal bg-white p-8">
         <p class="label text-slate">Step 3</p>
-        <h3 class="font-serif text-xl font-semibold mt-3 text-navy900">The therapist reviews progress</h3>
-        <p class="text-slate mt-3 text-[15px] leading-relaxed">Adherence, repetition counts, and form data flow back to the clinician dashboard, so therapists can adjust the plan or step in early.</p>
+        <h3 class="font-serif text-xl font-semibold mt-3 text-navy900">Progress becomes visible and actionable</h3>
+        <p class="text-slate mt-3 text-[15px] leading-relaxed">Therapists see adherence, movement quality, difficulty, and engagement patterns—helping them adjust the program before frustration, boredom, or poor form derails recovery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GAMIFICATION ================= -->
+<section id="gamification" class="game-grid py-24 border-y border-line">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="reveal">
+        <p class="label text-blue">The Axion Difference</p>
+        <h2 class="font-serif text-3xl sm:text-4xl font-semibold mt-3 tracking-tight text-navy900">Gamification designed around recovery psychology—not empty points.</h2>
+        <p class="text-slate mt-5 leading-relaxed max-w-xl">Most rehabilitation platforms digitize a checklist. Axion redesigns the experience around motivation: immediate feedback, achievable goals, visible progress, and a sense of mastery—without encouraging patients to rush, compete unsafely, or ignore pain.</p>
+        <div class="grid sm:grid-cols-2 gap-4 mt-8">
+          <div class="game-card bg-white rounded-xl p-5"><span class="xp-badge inline-flex px-3 py-1 rounded-full text-xs font-bold">ADAPTIVE</span><h3 class="font-semibold text-navy900 mt-4">Personalized missions</h3><p class="text-slate text-sm mt-2 leading-relaxed">Daily goals scale with protocol stage, prior performance, fatigue, and therapist-defined limits.</p></div>
+          <div class="game-card bg-white rounded-xl p-5"><span class="xp-badge inline-flex px-3 py-1 rounded-full text-xs font-bold">VISIBLE</span><h3 class="font-semibold text-navy900 mt-4">Recovery map</h3><p class="text-slate text-sm mt-2 leading-relaxed">Patients can see where they are, what they have unlocked, and what milestone comes next.</p></div>
+          <div class="game-card bg-white rounded-xl p-5"><span class="xp-badge inline-flex px-3 py-1 rounded-full text-xs font-bold">MEANINGFUL</span><h3 class="font-semibold text-navy900 mt-4">Clinical achievements</h3><p class="text-slate text-sm mt-2 leading-relaxed">Badges correspond to real recovery behaviors such as consistency, control, range, and confidence.</p></div>
+          <div class="game-card bg-white rounded-xl p-5"><span class="xp-badge inline-flex px-3 py-1 rounded-full text-xs font-bold">SAFE</span><h3 class="font-semibold text-navy900 mt-4">No harmful competition</h3><p class="text-slate text-sm mt-2 leading-relaxed">Patients compete against their own plan, not another patient’s body, injury, or recovery speed.</p></div>
+        </div>
+      </div>
+      <div class="reveal glow bg-navy900 rounded-2xl p-6 sm:p-8 text-white">
+        <div class="flex items-center justify-between"><div><p class="text-[#AEBEDA] text-xs uppercase tracking-widest">Today’s Recovery Quest</p><h3 class="font-serif text-2xl mt-2">Rebuild Knee Control</h3></div><span class="xp-badge px-3 py-1.5 rounded-full text-sm font-bold">LEVEL 4</span></div>
+        <div class="mt-8 bg-white/10 rounded-xl p-5"><div class="flex justify-between text-sm"><span>Daily goal</span><span class="font-semibold">360 / 450 XP</span></div><div class="h-3 bg-white/10 rounded-full mt-3 overflow-hidden"><div class="h-full bg-lime rounded-full" style="width:80%"></div></div><p class="text-[#AEBEDA] text-xs mt-2">One controlled set away from your goal</p></div>
+        <div class="grid grid-cols-3 gap-3 mt-4">
+          <div class="bg-white/10 rounded-xl p-4 text-center"><p class="text-2xl font-semibold">4</p><p class="text-[#AEBEDA] text-xs mt-1">day streak</p></div>
+          <div class="bg-white/10 rounded-xl p-4 text-center"><p class="text-2xl font-semibold">92</p><p class="text-[#AEBEDA] text-xs mt-1">form score</p></div>
+          <div class="bg-white/10 rounded-xl p-4 text-center"><p class="text-2xl font-semibold">7</p><p class="text-[#AEBEDA] text-xs mt-1">milestones</p></div>
+        </div>
+        <div class="mt-4 bg-white rounded-xl p-4 text-navy900 flex items-center justify-between"><div><p class="font-semibold">Next unlock: Stability Builder</p><p class="text-slate text-xs mt-1">+120 XP two sessions at 90+ form score</p></div><div class="w-12 h-12 rounded-full xp-badge flex items-center justify-center font-bold">82%</div></div>
       </div>
     </div>
   </div>
@@ -257,11 +296,11 @@
 
     <div class="reveal order-1 lg:order-2">
       <p class="label text-blue">For Physical Therapists</p>
-      <h2 class="font-serif text-3xl sm:text-4xl font-semibold mt-3 tracking-tight text-navy900">Care that does not end when the appointment does.</h2>
+      <h2 class="font-serif text-3xl sm:text-4xl font-semibold mt-3 tracking-tight text-navy900">Clinical control with a stronger reason for patients to follow through.</h2>
       <ul class="mt-8 space-y-5">
-        <li class="flex gap-3.5"><span class="text-blue font-serif mt-0.5">·</span><div><p class="font-semibold text-navy900">Extend care beyond clinic visits</p><p class="text-slate mt-1 text-[15px] leading-relaxed">Maintain visibility into the majority of a patient's week that happens outside your clinic.</p></div></li>
-        <li class="flex gap-3.5"><span class="text-blue font-serif mt-0.5">·</span><div><p class="font-semibold text-navy900">Monitor engagement, objectively</p><p class="text-slate mt-1 text-[15px] leading-relaxed">See completed sessions, repetitions, and measured form quality, not logs a patient fills in themselves.</p></div></li>
-        <li class="flex gap-3.5"><span class="text-blue font-serif mt-0.5">·</span><div><p class="font-semibold text-navy900">Identify patients at risk earlier</p><p class="text-slate mt-1 text-[15px] leading-relaxed">Axion flags drops in adherence or movement quality so you can step in before recovery stalls.</p></div></li>
+        <li class="flex gap-3.5"><span class="text-blue font-serif mt-0.5">·</span><div><p class="font-semibold text-navy900">Prescribe the experience, not just the exercise</p><p class="text-slate mt-1 text-[15px] leading-relaxed">Choose the exercises, thresholds, progression rules, and which motivational mechanics are appropriate for each patient.</p></div></li>
+        <li class="flex gap-3.5"><span class="text-blue font-serif mt-0.5">·</span><div><p class="font-semibold text-navy900">See motivation before it becomes dropout</p><p class="text-slate mt-1 text-[15px] leading-relaxed">Track not only completion and movement quality, but also streak loss, repeated retries, skipped challenges, and declining confidence signals.</p></div></li>
+        <li class="flex gap-3.5"><span class="text-blue font-serif mt-0.5">·</span><div><p class="font-semibold text-navy900">Intervene at the right moment</p><p class="text-slate mt-1 text-[15px] leading-relaxed">Axion highlights the patients who are losing momentum, not only those who have already stopped.</p></div></li>
       </ul>
       <a href="#demo" class="inline-block mt-9 bg-navy900 hover:bg-blue text-white font-semibold px-6 py-3 rounded-md transition-colors">Partner With Axion</a>
     </div>
@@ -273,12 +312,12 @@
   <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
     <div class="reveal">
       <p class="label text-blue">For Patients</p>
-      <h2 class="font-serif text-3xl sm:text-4xl font-semibold mt-3 tracking-tight text-navy900">Support between appointments, not just during them.</h2>
-      <p class="text-slate mt-5 leading-relaxed max-w-md">Home exercise programs are easy to fall behind on when no one is watching. Axion gives you real time feedback on your form, tracks your progress automatically, and keeps your therapist aware of how you are doing.</p>
+      <h2 class="font-serif text-3xl sm:text-4xl font-semibold mt-3 tracking-tight text-navy900">A recovery experience that makes progress feel real.</h2>
+      <p class="text-slate mt-5 leading-relaxed max-w-md">Axion breaks recovery into clear, achievable missions. Every controlled rep moves your progress forward, while your therapist stays connected to the data that matters.</p>
       <ul class="mt-7 space-y-3 text-[15px] text-navy900">
-        <li class="flex gap-2.5"><svg class="mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="#2E5FCC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Real time feedback on exercise form</li>
-        <li class="flex gap-2.5"><svg class="mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="#2E5FCC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Automatic repetition and session tracking</li>
-        <li class="flex gap-2.5"><svg class="mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="#2E5FCC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Progress your therapist can see and act on</li>
+        <li class="flex gap-2.5"><svg class="mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="#2E5FCC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Real-time coaching and movement scoring</li>
+        <li class="flex gap-2.5"><svg class="mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="#2E5FCC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Streaks, XP, milestones, and unlocks</li>
+        <li class="flex gap-2.5"><svg class="mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6.5 12L13 4" stroke="#2E5FCC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Goals personalized to your recovery—not someone else’s</li>
       </ul>
       <a href="#demo" class="inline-block mt-9 border border-navy900/20 hover:border-blue hover:text-blue text-navy900 font-semibold px-6 py-3 rounded-md transition-colors">Start Your Recovery Journey</a>
     </div>
@@ -286,27 +325,27 @@
     <div class="reveal flex justify-center">
       <div class="w-[260px] card rounded-2xl overflow-hidden shadow-sm">
         <div class="bg-navy900 px-5 py-3">
-          <p class="text-white text-[13px] font-medium">Today's Session</p>
-          <p class="text-[#9FB0CC] text-[11px] mt-0.5">Knee Rehabilitation, Week 3</p>
+          <p class="text-white text-[13px] font-medium">Today's Quest</p>
+          <p class="text-[#9FB0CC] text-[11px] mt-0.5">Knee Recovery • Level 3</p>
         </div>
         <div class="p-5 bg-white space-y-3">
           <div class="flex items-center justify-between card rounded-md px-3.5 py-2.5">
             <span class="text-navy900 text-[13px]">Straight leg raises</span>
-            <span class="text-[12px] text-blue font-semibold">Complete</span>
+            <span class="text-[12px] text-blue font-semibold">+120 XP</span>
           </div>
           <div class="flex items-center justify-between card rounded-md px-3.5 py-2.5">
             <span class="text-navy900 text-[13px]">Wall squats</span>
-            <span class="text-[12px] text-slate font-semibold">8 of 10</span>
+            <span class="text-[12px] text-slate font-semibold">8 / 10 reps</span>
           </div>
           <div class="flex items-center justify-between card rounded-md px-3.5 py-2.5 opacity-60">
             <span class="text-navy900 text-[13px]">Heel slides</span>
-            <span class="text-[12px] text-slate">Up next</span>
+            <span class="text-[12px] text-slate">Locked</span>
           </div>
           <div class="pt-2">
             <div class="h-2 rounded-full bg-mist overflow-hidden">
               <div class="h-full bg-blue" style="width: 78%;"></div>
             </div>
-            <p class="text-[11px] text-slate mt-1.5">78% of today's session complete</p>
+            <p class="text-[11px] text-slate mt-1.5">78% of today’s quest complete • streak protected</p>
           </div>
         </div>
       </div>
@@ -319,8 +358,8 @@
   <div class="max-w-7xl mx-auto px-6 lg:px-10">
     <div class="reveal max-w-xl">
       <p class="label text-blue">Technology</p>
-      <h2 class="font-serif text-3xl sm:text-4xl font-semibold mt-3 tracking-tight text-navy900">Built as clinical infrastructure, not a fitness feature.</h2>
-      <p class="text-slate mt-5 leading-relaxed">Every layer of Axion is designed to a clinical standard of accuracy, privacy, and reliability, from movement capture to the data therapists use to make decisions.</p>
+      <h2 class="font-serif text-3xl sm:text-4xl font-semibold mt-3 tracking-tight text-navy900">Clinical-grade intelligence underneath a game patients can believe in.</h2>
+      <p class="text-slate mt-5 leading-relaxed">The playful experience sits on top of a serious clinical system: movement analysis, therapist-defined guardrails, adaptive difficulty, and secure health data handling.</p>
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-line border border-line rounded-lg overflow-hidden mt-14">
@@ -341,8 +380,8 @@
       </div>
       <div class="reveal bg-white p-7">
         <p class="label text-slate">Engagement</p>
-        <h3 class="font-serif text-lg font-semibold mt-3 text-navy900">Guided assistance</h3>
-        <p class="text-slate text-[14.5px] mt-2 leading-relaxed">Structured prompts and encouragement keep repetitive exercise sessions easier to stay consistent with.</p>
+        <h3 class="font-serif text-lg font-semibold mt-3 text-navy900">Motivation engine</h3>
+        <p class="text-slate text-[14.5px] mt-2 leading-relaxed">Behavioral design translates clinical progress into goals, feedback loops, streak protection, milestone unlocks, and recovery narratives.</p>
       </div>
       <div class="reveal bg-white p-7">
         <p class="label text-slate">Infrastructure</p>
@@ -400,12 +439,12 @@
   <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-5 gap-16">
     <div class="lg:col-span-2 reveal">
       <p class="label text-blue">About Axion</p>
-      <p class="font-serif text-2xl sm:text-3xl font-semibold mt-4 leading-snug text-navy900">Closing the gap between clinical rehabilitation and recovery at home.</p>
+      <p class="font-serif text-2xl sm:text-3xl font-semibold mt-4 leading-snug text-navy900">Making rehabilitation clinically measurable—and emotionally easier to continue.</p>
     </div>
     <div class="lg:col-span-3 reveal space-y-5 text-slate leading-relaxed text-[15.5px]">
       <p>Axion began after extensive time inside physical therapy clinics, orthopedic research settings, and rehabilitation programs, working alongside physical therapists, orthopedic surgeons, rehabilitation researchers, and the patients recovering under their care.</p>
       <p>Across every setting, the same pattern kept showing up. Patients received a carefully designed exercise program, then struggled to keep up with it once they left the clinic. This was not from a lack of effort. It came from a lack of structure, feedback, and accountability once no one was watching.</p>
-      <p>Axion was built to close that gap: giving patients a guided way to do their exercises correctly at home, and giving therapists the visibility to support them through the entire course of recovery, not just the minutes spent in the clinic.</p>
+      <p>Axion was built to close that gap by combining clinically guided movement intelligence with thoughtful gamification. The goal is not to make recovery childish. It is to make progress visible, effort rewarding, and consistency easier to sustain.</p>
     </div>
   </div>
 </section>
@@ -415,12 +454,12 @@
   <div class="max-w-6xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-start">
     <div class="reveal">
       <p class="label text-[#9FB0CC]">Request a Demo</p>
-      <h2 class="font-serif text-3xl sm:text-4xl font-semibold mt-3 text-white tracking-tight">See Axion with your own patient workflows.</h2>
+      <h2 class="font-serif text-3xl sm:text-4xl font-semibold mt-3 text-white tracking-tight">See how Axion turns your protocols into engaging recovery journeys.</h2>
       <p class="text-[#AEBEDA] mt-4 leading-relaxed max-w-md">For clinics, practices, and health systems evaluating Axion for their rehabilitation programs. A member of our team will follow up within one business day.</p>
       <div class="mt-8 divider-line"></div>
       <ul class="mt-8 space-y-4 text-[14.5px] text-[#AEBEDA]">
-        <li>Live walkthrough of the clinician dashboard</li>
-        <li>Review of your current exercise protocols</li>
+        <li>Live walkthrough of the patient quest and clinician dashboard</li>
+        <li>Gamification mapping for your current exercise protocols</li>
         <li>Pricing and rollout timeline for your practice</li>
       </ul>
     </div>
@@ -479,13 +518,14 @@
         </svg>
         <span class="font-serif text-navy900 text-lg font-semibold">Axion</span>
       </div>
-      <p class="text-slate text-[13.5px] mt-4 max-w-xs leading-relaxed">AI powered rehabilitation infrastructure for physical therapy practices and health systems.</p>
+      <p class="text-slate text-[13.5px] mt-4 max-w-xs leading-relaxed">Gamified AI rehabilitation that helps patients stay engaged and gives therapists clearer visibility between visits.</p>
     </div>
     <div>
       <p class="label text-navy900/70">Product</p>
       <ul class="mt-4 space-y-2.5 text-slate text-[14px]">
         <li><a href="#how-it-works" class="hover:text-blue">How It Works</a></li>
-        <li><a href="#technology" class="hover:text-blue">Technology</a></li>
+        <li><a href="#gamification" class="hover:text-blue">Gamification</a>
+      <a href="#technology" class="hover:text-blue">Technology</a></li>
         <li><a href="#research" class="hover:text-blue">Research</a></li>
         <li><a href="#demo" class="hover:text-blue">Request a Demo</a></li>
       </ul>
